@@ -15,7 +15,7 @@ This CocoaPods library helps you perform calculation.
   spec.ios.deployment_target = "10.1"
   spec.swift_version = "5.5"
 
-  spec.source        = { :git => "https://github.com/Astemir-10/SAHLSPlayer.git" }
+  spec.source        = { :git => "https://github.com/Astemir-10/SAHLSPlayer.git", :tag => "#{spec.version}" }
   spec.source_files  = "SAHLSPlayer/**/*.{h,m,swift}"
 
 end
