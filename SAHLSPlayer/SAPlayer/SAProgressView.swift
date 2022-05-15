@@ -86,6 +86,7 @@ public final class SAPlayerProgressView: UIView {
     }
     
     public override func layoutSubviews() {
+        
         super.layoutSubviews()
         let constatnt = labelWidth * 2 + 10
         progressLayer.frame.size = .init(width: self.frame.width - constatnt, height: lineHeight)
