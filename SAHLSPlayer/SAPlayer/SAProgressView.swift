@@ -9,11 +9,11 @@ import UIKit
 import AVKit
 
 
-protocol SAPlayerProgressViewDelegate: AnyObject {
+public protocol SAPlayerProgressViewDelegate: AnyObject {
     func progresView(progress: Double)
 }
 
-final class SAPlayerProgressView: UIView {
+public final class SAPlayerProgressView: UIView {
     
     private lazy var progressPoint: UIView = {
         let view = UIView()
@@ -85,7 +85,7 @@ final class SAPlayerProgressView: UIView {
         ])
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         let constatnt = labelWidth * 2 + 10
         progressLayer.frame.size = .init(width: self.frame.width - constatnt, height: lineHeight)

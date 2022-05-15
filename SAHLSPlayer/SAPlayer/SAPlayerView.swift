@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 
 
-final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlayerProgressViewDelegate, SABasePlayerOberver  {
+public final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlayerProgressViewDelegate, SABasePlayerOberver  {
     
     private var currentURL: URL? {
         didSet {
@@ -99,8 +99,8 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
         self.urls = urls
     }
     
-    func saPlayer(didUpdate time: CMTime) {
-        if let dur = self.player?.currentItem?.asset.duration {
+    public func saPlayer(didUpdate time: CMTime) {
+//        if let dur = self.player?.currentItem?.asset.duration {
             DispatchQueue.main.async {
 //                let minutes = Int(dur.seconds / 60)
 //                let seconds = Int(Int(dur.seconds) % 60)
@@ -114,7 +114,7 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
 //                    self.progressView.setProgress(progress: time.seconds / dur.seconds, currentTime: "\(currentMinutes < 10 ? "0": "")\(currentMinutes):\(currentSeconds < 10 ? "0" : "")\(currentSeconds)", duration: "\(minutes < 10 ? "0": "")\(minutes):\(seconds < 10 ? "0" : "")\(seconds)")
 //                }
             }
-        }
+//        }
 
     }
     
@@ -127,7 +127,7 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
         self.isPlaying.toggle()
     }
     
-    func saPlayer(didChange status: AVPlayer.Status) {
+    public func saPlayer(didChange status: AVPlayer.Status) {
         if let dur = self.player?.currentItem?.asset.duration, status == .readyToPlay {
             self.setTime(from: dur)
         }
@@ -141,7 +141,7 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
     
     }
     
-    func progresView(progress: Double) {
+    public func progresView(progress: Double) {
         if let dur = self.player?.currentItem?.asset.duration {
             self.player?.seek(to: CMTimeMakeWithSeconds(progress * dur.seconds, preferredTimescale: 1))
         }

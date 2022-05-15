@@ -11,7 +11,7 @@ import AVKit
 
 
 
-class SAPlayerControlViw2: UIView {
+public class SAPlayerControlViw2: UIView {
     
     var closure1: (() -> ())? = {}
     
@@ -49,7 +49,7 @@ class SAPlayerControlViw2: UIView {
         
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         layerA.frame = self.bounds
         buttonPlayPause.frame.size = .init(width: 100, height: 100)

@@ -8,23 +8,23 @@
 import UIKit
 import AVKit
 
-protocol SABasePlayerStatusObserver: AnyObject {
+public protocol SABasePlayerStatusObserver: AnyObject {
     func saPlayer(didChange status: AVPlayer.Status)
 }
 
-extension SABasePlayerStatusObserver {
+public extension SABasePlayerStatusObserver {
     func saPlayer(didChange status: AVPlayer.Status) { }
 }
 
-protocol SABasePlayerTimeOberver: AnyObject {
+public protocol SABasePlayerTimeOberver: AnyObject {
     func saPlayer(didUpdate time: CMTime)
 }
 
-protocol  SABasePlayerOberver: SABasePlayerStatusObserver, SABasePlayerTimeOberver {
+public protocol  SABasePlayerOberver: SABasePlayerStatusObserver, SABasePlayerTimeOberver {
     
 }
 
-final private class WeakPlayerTimeObserver {
+private final class WeakPlayerTimeObserver {
     private(set) weak var value: SABasePlayerOberver?
     
     init(_ v: SABasePlayerOberver?) {
@@ -32,7 +32,7 @@ final private class WeakPlayerTimeObserver {
     }
 }
 
-class SABasePlayerView: UIView {
+public class SABasePlayerView: UIView {
     
     var player: AVPlayer? {
         didSet {
@@ -63,7 +63,7 @@ class SABasePlayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         self.playerLayer.frame = self.bounds
         
