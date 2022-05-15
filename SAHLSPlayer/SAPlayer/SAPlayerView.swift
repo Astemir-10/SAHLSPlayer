@@ -51,7 +51,6 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
         super.init(frame: .zero)
         self.urls = urls
         self.setup()
-      
     }
 
     private override init(frame: CGRect) {
@@ -61,6 +60,11 @@ final class SAPlayerView: SABasePlayerView, SAPlayerControlViewDelegate, SAPlaye
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setUrls(_ urls: [URL]) {
+        self.urls = urls
+        self.currentURL = urls.first
     }
     
     private func setup() {
