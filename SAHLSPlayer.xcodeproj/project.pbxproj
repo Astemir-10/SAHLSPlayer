@@ -11,6 +11,11 @@
 		1436B742283180B10025F1DF /* SAHLSPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1436B737283180B00025F1DF /* SAHLSPlayer.framework */; };
 		1436B747283180B10025F1DF /* SAHLSPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B746283180B10025F1DF /* SAHLSPlayerTests.swift */; };
 		1436B748283180B10025F1DF /* SAHLSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1436B73A283180B00025F1DF /* SAHLSPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1436B77928318A500025F1DF /* SABasePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B77428318A4F0025F1DF /* SABasePlayerView.swift */; };
+		1436B77A28318A500025F1DF /* SAProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B77528318A4F0025F1DF /* SAProgressView.swift */; };
+		1436B77B28318A500025F1DF /* SAPlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B77628318A4F0025F1DF /* SAPlayerControlView.swift */; };
+		1436B77C28318A500025F1DF /* SAPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B77728318A4F0025F1DF /* SAPlayerView.swift */; };
+		1436B77D28318A500025F1DF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436B77828318A4F0025F1DF /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		1436B73B283180B00025F1DF /* SAHLSPlayer.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SAHLSPlayer.docc; sourceTree = "<group>"; };
 		1436B741283180B10025F1DF /* SAHLSPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAHLSPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1436B746283180B10025F1DF /* SAHLSPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAHLSPlayerTests.swift; sourceTree = "<group>"; };
+		1436B77428318A4F0025F1DF /* SABasePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABasePlayerView.swift; sourceTree = "<group>"; };
+		1436B77528318A4F0025F1DF /* SAProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAProgressView.swift; sourceTree = "<group>"; };
+		1436B77628318A4F0025F1DF /* SAPlayerControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerControlView.swift; sourceTree = "<group>"; };
+		1436B77728318A4F0025F1DF /* SAPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerView.swift; sourceTree = "<group>"; };
+		1436B77828318A4F0025F1DF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1436B73A283180B00025F1DF /* SAHLSPlayer.h */,
+				1436B77328318A4F0025F1DF /* SAPlayer */,
 				1436B73B283180B00025F1DF /* SAHLSPlayer.docc */,
 			);
 			path = SAHLSPlayer;
@@ -83,6 +94,18 @@
 				1436B746283180B10025F1DF /* SAHLSPlayerTests.swift */,
 			);
 			path = SAHLSPlayerTests;
+			sourceTree = "<group>";
+		};
+		1436B77328318A4F0025F1DF /* SAPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1436B77428318A4F0025F1DF /* SABasePlayerView.swift */,
+				1436B77528318A4F0025F1DF /* SAProgressView.swift */,
+				1436B77628318A4F0025F1DF /* SAPlayerControlView.swift */,
+				1436B77728318A4F0025F1DF /* SAPlayerView.swift */,
+				1436B77828318A4F0025F1DF /* Helper.swift */,
+			);
+			path = SAPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1436B73C283180B00025F1DF /* SAHLSPlayer.docc in Sources */,
+				1436B77D28318A500025F1DF /* Helper.swift in Sources */,
+				1436B77B28318A500025F1DF /* SAPlayerControlView.swift in Sources */,
+				1436B77C28318A500025F1DF /* SAPlayerView.swift in Sources */,
+				1436B77928318A500025F1DF /* SABasePlayerView.swift in Sources */,
+				1436B77A28318A500025F1DF /* SAProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +426,7 @@
 		1436B74F283180B10025F1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7D3Z5CX5PT;
@@ -419,6 +448,7 @@
 		1436B750283180B10025F1DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7D3Z5CX5PT;
