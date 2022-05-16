@@ -1,6 +1,10 @@
 # SAHLSPlayer
 HLS Player 
 
+cocapods
+
+pod 'SAHLSPlayer'
+
 
 import UIKit
 import SAHLSPlayer
