@@ -1,6 +1,7 @@
 # SAHLSPlayer
 HLS Player 
 
+<p>
 cocapods
 
 pod 'SAHLSPlayer'
@@ -25,3 +26,4 @@ var playerView: SAPlayerView!
   }
   }
 }
+    </p>
